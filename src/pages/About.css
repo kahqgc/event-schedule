@@ -1,0 +1,39 @@
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Quicksand", sans-serif;
+  color: #3d405b;
+  background-color:beige;
+  border-radius: 10px;
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  color: #e07a5f;
+  margin-bottom: 1rem;
+}
+
+.about-container h2 {
+  color: #81b29a;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+
+.about-container li{
+    padding-bottom: 0.5rem;
+    text-align: right;
+}
+
+.flower{
+    float:right;
+    padding: 2rem;
+    width: 160px;
+    height: auto;
+    margin-top: 2rem;
+}

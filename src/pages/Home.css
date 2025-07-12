@@ -1,0 +1,28 @@
+.festival-title {
+  font-family: "Limelight", serif;
+  font-size: 5rem;
+  color: #e07a5f;
+  text-align: center;
+  margin: 0.5em;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px #f4f1de;
+}
+
+.festival-tagline {
+  font-family: "Quicksand", sans-serif;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #343755;
+  text-align: center;
+  margin-top: -0.5em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background: repeating-linear-gradient(#f2cc8f, #81b29a);
+}
+
+img{
+margin-bottom: 2rem;
+max-width: 100%;
+height: auto;
+}
+/* added max-width and height: auto for responsiveness */

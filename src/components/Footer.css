@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+#footer-container, #footer-social {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #3d405b
+
+}
+#footer-container{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  background: #f4f1de;
+  font-size: 1rem;
+  border-top: 2px solid #e07a5f;
+}
+
+#footer-container p {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#footer-social a:hover {
+  color: #e07a5f
+}
