@@ -1,8 +1,7 @@
-#root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  box-sizing: border-box;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
@@ -12,10 +11,20 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
-/* 
+/* #root, #app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+} */
+/* .content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}  */
+/*
 -set transparent cover over the background image with linear gradient
 - min-height to make sure body is at least as tall as the browser
 - 100vh means 100% viewportheight to cover the whole page

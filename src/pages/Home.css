@@ -21,8 +21,10 @@
 }
 
 img{
-margin-bottom: 2rem;
-max-width: 100%;
+display: block;
+max-width: 90%;
 height: auto;
+margin: 2rem auto;
+border-radius: 10px;
 }
 /* added max-width and height: auto for responsiveness */

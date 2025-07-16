@@ -1,25 +1,28 @@
-.schedule-container {
-    display: "flex";
-    gap: "2rem";
+/* .schedule-container {
+    display: flex;
+    justify-content: center;
+} */
+
+.schedule-heading {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #343755;
 }
 
-.schedule-table {
-    width: 100%;
+.schedule-table{
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
     font-family: "Quicksand", sans-serif;
     background-color: rgba(255, 255, 255, 0.85);
 }
 
-.schedule-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 500;
-  color: #343755;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #81b29a;
-  display: inline-block; 
-  /* makes the line beneath only under the letters */
+button{
+    all: unset;
+    cursor: pointer;
+    font-family: "Quicksand",sans-serif;
 }
 
 .schedule-table thead {
@@ -35,9 +38,6 @@
     font-size: 1rem;
 }
 
-.schedule-table th {
-    font-weight: bold;
-}
 
 .schedule-table tbody th {
     font-size: 1.3rem;
@@ -53,5 +53,4 @@
 
 .schedule-table tbody td:hover {
     background-color: #f2cc8f;
-    cursor: pointer;
 }

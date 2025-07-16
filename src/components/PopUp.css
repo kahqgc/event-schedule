@@ -1,0 +1,57 @@
+.pop-up-box {
+  position:fixed;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+  border: 2px solid #e07a5f;
+  border-radius: 10px;
+  padding: 3rem;
+  width: 30%;
+  font-family: "Quicksand", sans-serif;
+  color: #343755;
+}
+
+.pop-up-box button.X {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  color: #d86c4e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pop-up-box button.X:hover {
+  background-color: black;
+}
+
+.pop-up-box h1 {
+  font-size: 2rem;
+}
+
+.pop-up-box p, .pop-up-box span {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pop-up-box button.sign-up {
+  background-color: #81b29a;
+  border: none;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.pop-up-box button.sign-up:hover {
+  background-color: black;
+}
+
+ul{
+    list-style-type: none;
+}
