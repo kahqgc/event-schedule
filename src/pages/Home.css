@@ -9,7 +9,6 @@
 }
 
 .festival-tagline {
-  font-family: "Quicksand", sans-serif;
   padding: 1rem;
   font-size: 1.5rem;
   color: #343755;
@@ -21,9 +20,8 @@
 }
 
 img{
-display: block;
-max-width: 90%;
-height: auto;
+display: block; /*changes it from inline to block*/
+max-width: 90%; /*responsiveness to changes in viewport size*/
 margin: 2rem auto;
 border-radius: 10px;
 }

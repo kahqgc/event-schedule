@@ -1,8 +1,8 @@
-export default function ScheduleCell({ setPopUp, getSession, stageName }) {
-  const session = getSession(stageName);
+export default function ScheduleCell({ setScheduledEvent, getSession, stage }) {
+  const session = getSession(stage); /*find the session that corresponds with particular stage and timeslot */
   return (
     <button onClick={() => {
-      setPopUp(session);
+      setScheduledEvent(session); /*sets scheduled event use state from schedule as session*/
     }}>
       {session ? session.title : ""}
     </button>

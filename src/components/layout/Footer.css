@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-#footer-container {
+#footer-container, #footer-social{
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /*Align items vertically */
-  flex-wrap: wrap; /* Wrap on smaller screens */
-  gap: 2rem;
-  padding: 1rem;
-  background-color: #f4f1de;
-  width: 100%;
-  font-size: 1.1rem;
-  border-top: 2px solid #e07a5f;
-  font-family: "Quicksand", sans-serif;
-  color: #3d405b;
+  gap: 2rem
 }
 
-#footer-social {
-  display: flex;
-  gap: 1rem;
+#footer-container {
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /*Align items vertically */
+  flex-wrap: wrap;  /*Wrap on smaller screens */
+  padding: 1rem;
+  background-color: #f4f1de;
+  font-size: 1.1rem;
+  border-top: 2px solid #e07a5f;
+  color: #3d405b;
 }
 
 #footer-container p {

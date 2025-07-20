@@ -1,9 +1,12 @@
-html, body, #root {
+html,
+body{
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
 }
 
+/* set transparent cover over the background image with linear gradient */
 body {
   background-color: beige;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
@@ -13,19 +16,36 @@ body {
   background-repeat: no-repeat;
 }
 
-/* #root, #app {
+/* flex box to stack children vertically*/
+#root, #app {
   display: flex;
   flex-direction: column;
-  width: 100%;
+}
+
+/*ensures root takes up whole page for pages that have little content*/
+#root{
   min-height: 100vh;
-} */
-/* .content{
-  display: flex;
-  flex-direction: column;
+}
+
+/*makes #app fill #root and .content to fill remaining space between header and footer*/
+#app, .content {
   flex: 1;
-}  */
-/*
--set transparent cover over the background image with linear gradient
-- min-height to make sure body is at least as tall as the browser
-- 100vh means 100% viewportheight to cover the whole page
-*/
+} 
+
+/*tablet and phone responsiveness*/
+@media screen and (max-width: 768px) {
+  nav h1 {
+    display: none;
+  }
+
+  a {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  a {
+    font-size: 0.5rem;
+  }
+}
+

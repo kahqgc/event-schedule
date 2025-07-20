@@ -3,9 +3,10 @@
 
 .header-container, .nav-links{
   display: flex;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .header-container {

@@ -2,7 +2,6 @@
   max-width: 1000px;
   margin: 4rem auto;
   padding: 2rem;
-  font-family: "Quicksand", sans-serif;
   color: #3d405b;
   background-color:beige;
   border-radius: 10px;
@@ -34,6 +33,5 @@
     float:right;
     padding: 2rem;
     width: 160px;
-    height: auto;
     margin-top: 2rem;
 }

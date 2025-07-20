@@ -1,39 +1,23 @@
-import ScheduleCell from "./ScheduleCell"
+import ScheduleCell from "./ScheduleCell";
 
-export default function ScheduleRow({ getSession, index, slot, setPopUp }) {
-    return (
-        <tr key={index}>
-            <th>{slot.time}</th>
-            <td>
-                <ScheduleCell
-                    stageName="Luna Stage"
-                    getSession={getSession}
-                    setPopUp={setPopUp} />
-            </td>
-            <td>
-                <ScheduleCell
-                    stageName="Eclipse Stage"
-                    getSession={getSession}
-                    setPopUp={setPopUp} />
-            </td>
-            <td>
-                 <ScheduleCell 
-                           stageName="The Flow Garden"
-                           getSession={getSession}
-                           setPopUp={setPopUp} />
-            </td>
-            <td>
-                  <ScheduleCell 
-                           stageName="The Sky Deck"
-                           getSession={getSession}
-                           setPopUp={setPopUp} />
-            </td>
-            <td>
-                   <ScheduleCell 
-                           stageName="The Bonfire"
-                           getSession={getSession}
-                           setPopUp={setPopUp} />
-            </td>
-        </tr>
-    )
+export default function ScheduleRow({ slot, stages, setScheduledEvent }) {
+  /*Helper function to find specific stage within the row timeslot*/
+  function getSession(stage) {
+    return slot.sessions.find((session) => session.stage === stage); /*find the session whose stage matches the stage passed in the function*/
+  }
+
+  return (
+    <tr key={slot.time}>
+      <th>{slot.time}</th>
+      {stages.map((stage) => ( /*map through each stage to create a cell per stage*/
+        <td key={stage}>
+          <ScheduleCell
+            stage={stage} /*pass stage as a prop*/
+            getSession={getSession}
+            setScheduledEvent={setScheduledEvent}
+          />
+        </td>
+      ))}
+    </tr>
+  );
 }

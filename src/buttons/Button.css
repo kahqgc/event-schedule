@@ -1,0 +1,14 @@
+button.save, button.edit {
+  background-color: #81b29a;
+  border: none;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button.save:hover, button.edit:hover {
+  background-color: black;
+}

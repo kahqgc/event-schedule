@@ -1,7 +1,5 @@
 import "./About.css"
 import flower from "../assets/Flowers.svg"
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default function About() {
     return (
