@@ -1,6 +1,6 @@
 import Form from "./Form";
 import SavedNote from "./SavedNote";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AddANote.css";
 
 export default function AddANote({ eventId }) {
@@ -9,9 +9,7 @@ export default function AddANote({ eventId }) {
   const [save, setSave] = useState(false);
   const [savedNote, setSavedNote] = useState("");
   const [error, setError] = useState("");
-  const [hasLoaded, setHasLoaded] = useState(false);
-
-
+  
   const handleTextAreaChange = (event) => {
     setTextArea(event.target.value);
   };
@@ -48,7 +46,7 @@ export default function AddANote({ eventId }) {
     }
   };
 
-  const handleHasLoaded = () => {
+ useEffect (() => {
     const saved = localStorage.getItem(`note-${eventId}`);
     const savedCategory = localStorage.getItem(
       `category-${eventId}`
@@ -63,12 +61,8 @@ export default function AddANote({ eventId }) {
     if (savedCategory) {
       setCategory(savedCategory);
     }
-    setHasLoaded(true);
-  };
+  }, [eventId]);
 
-  if (!hasLoaded){
-    handleHasLoaded()
-  }
 
   return (
     <div className="add-a-note-box">
