@@ -2,6 +2,7 @@ import "./PopUp.css";
 import AddANote from "./AddANote";
 
 export default function PopUp({ scheduledEvent, onClose }) {
+
   const eventId =
     scheduledEvent.title.toLowerCase(); /*Added to make each saved note unique calling the ID the title of the event*/
   return (

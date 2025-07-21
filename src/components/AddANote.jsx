@@ -1,6 +1,6 @@
 import Form from "./Form";
 import SavedNote from "./SavedNote";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./AddANote.css";
 
 export default function AddANote({ eventId }) {
@@ -9,6 +9,8 @@ export default function AddANote({ eventId }) {
   const [save, setSave] = useState(false);
   const [savedNote, setSavedNote] = useState("");
   const [error, setError] = useState("");
+  const [hasLoaded, setHasLoaded] = useState(false);
+
 
   const handleTextAreaChange = (event) => {
     setTextArea(event.target.value);
@@ -27,10 +29,13 @@ export default function AddANote({ eventId }) {
     event.preventDefault(); /*stops unwanted form submission*/
     if (!textArea) {
       setError("Error: Please enter a note before saving!");
+
     } else if (textArea.length > 300) {
       setError("Error: Text cannot exceed 300 characters");
+
     } else if (!category) {
       setError("Please select a category!");
+
     } else {
       setError(""); //clears error messages
       setSave(true); //change state to true for a save and shows SavedNote component
@@ -43,14 +48,14 @@ export default function AddANote({ eventId }) {
     }
   };
 
-  useEffect(() => {
-    const saved = localStorage.getItem(
-      `note-${eventId}`
-    ); 
-    const savedCategory = localStorage.getItem(`category-${eventId}`); /*retrieving saved note and category from local storage based on eventId*/
+  const handleHasLoaded = () => {
+    const saved = localStorage.getItem(`note-${eventId}`);
+    const savedCategory = localStorage.getItem(
+      `category-${eventId}`
+    ); /*retrieving saved note and category from local storage based on eventId*/
 
     if (saved) {
-      setSavedNote(saved); 
+      setSavedNote(saved);
       setTextArea(saved); // fill text area with existing saved note so user still sees saved note if they come back
       setSave(true); //allows saved note to appear in the saved-note div and not in textArea
     }
@@ -58,7 +63,12 @@ export default function AddANote({ eventId }) {
     if (savedCategory) {
       setCategory(savedCategory);
     }
-  }, [eventId]); //run this when eventId changes (user clicks on a different event)
+    setHasLoaded(true);
+  };
+
+  if (!hasLoaded){
+    handleHasLoaded()
+  }
 
   return (
     <div className="add-a-note-box">
