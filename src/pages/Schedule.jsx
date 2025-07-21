@@ -5,7 +5,6 @@ import { useState } from "react";
 import "./Schedule.css";
 
 export default function Schedule() {
-
   const [scheduledEvent, setScheduledEvent] =
     useState(null); /*indicates no scheduled event selected */
 

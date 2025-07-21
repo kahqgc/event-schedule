@@ -9,7 +9,7 @@ export default function ScheduleRow({ slot, stages, setScheduledEvent }) {
   return (
     <tr key={slot.time}>
       <th>{slot.time}</th>
-      {stages.map((stage) => ( /*map through each stage to create a cell per stage*/
+      {stages.map((stage) => ( /*map through each stage in stages array to create a cell per stage*/
         <td key={stage}>
           <ScheduleCell
             stage={stage} /*pass stage as a prop*/

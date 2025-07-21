@@ -9,7 +9,7 @@ export default function AddANote({ eventId }) {
   const [save, setSave] = useState(false);
   const [savedNote, setSavedNote] = useState("");
   const [error, setError] = useState("");
-  
+
   const handleTextAreaChange = (event) => {
     setTextArea(event.target.value);
   };
@@ -27,16 +27,13 @@ export default function AddANote({ eventId }) {
     event.preventDefault(); /*stops unwanted form submission*/
     if (!textArea) {
       setError("Error: Please enter a note before saving!");
-
     } else if (textArea.length > 300) {
       setError("Error: Text cannot exceed 300 characters");
-
     } else if (!category) {
       setError("Please select a category!");
-
     } else {
       setError(""); //clears error messages
-      setSave(true); //change state to true for a save and shows SavedNote component
+      setSave(true); //change state to true for a save to show SavedNote component
       setSavedNote(textArea); //storing textArea as a saved note
       localStorage.setItem(
         `note-${eventId}`,
@@ -46,7 +43,7 @@ export default function AddANote({ eventId }) {
     }
   };
 
- useEffect (() => {
+  useEffect(() => {
     const saved = localStorage.getItem(`note-${eventId}`);
     const savedCategory = localStorage.getItem(
       `category-${eventId}`
@@ -62,7 +59,6 @@ export default function AddANote({ eventId }) {
       setCategory(savedCategory);
     }
   }, [eventId]);
-
 
   return (
     <div className="add-a-note-box">

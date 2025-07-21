@@ -3,10 +3,10 @@
 
 .header-container, .nav-links{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /*centers horizontally*/
+  align-items: center; /*centeral vertically*/
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*wrap onto next line if not enough space for responsiveness*/
 }
 
 .header-container {

@@ -11,12 +11,9 @@ export default function About() {
                     movement, music, and mindfulness meet.
                 </p>
                 <p>
-                    Set in nature and rooted in intention, EarthPulse is more than just a
-                    festival — it's a gathering of souls ready to reconnect with the earth,
-                    with each other, and with themselves. Through yoga, live music,
-                    holistic workshops, spiritual ceremonies, and meaningful community, we
-                    invite you to slow down and remember what it feels like to truly
-                    belong.
+                    Set in nature and rooted in intention, EarthPulse is more than just a festival. 
+                    Through yoga, live music, holistic workshops, spiritual ceremonies, and meaningful
+                    community, we invite you to slow down and remember what it feels like to truly belong.
                 </p>
                 <img className="flower" src={flower} alt="Flower logo" />
                 <h2>What We Offer</h2>
@@ -25,7 +22,7 @@ export default function About() {
                     <li>Live Music under the stars featuring conscious artists</li>
                     <li>Workshops on healing arts, breathwork, and herbalism</li>
                     <li>Ceremonial Gatherings, sound baths, and nature walks</li>
-                    <li>Holistic Marketplace with local artisans and plant-based food</li>
+                    <li>Holistic Marketplace with local artisans</li>
                     <li>Camping under the trees to reconnect with nature</li>
                 </ul>
             </div>
