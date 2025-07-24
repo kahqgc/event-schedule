@@ -8,7 +8,7 @@ export default function ScheduleCell({ setScheduledEvent, getSession, stage }) {
       onClick={() => {
         setScheduledEvent(
           session
-        ); /*when clicked, tell schedule.jsx which session was clicked*/ 
+        ); /*update parent with selected session */
       }}
     >
       {session ? session.title : ""}

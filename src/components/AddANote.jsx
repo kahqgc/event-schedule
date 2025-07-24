@@ -38,21 +38,20 @@ export default function AddANote({ eventId }) {
       localStorage.setItem(
         `note-${eventId}`,
         textArea
-      ); /*setting a key value pair .setItem(key, value) to the user input and storing it locally*/
+      ); /*setting a key value pair .setItem(key, value) of the user input and storing it locally*/
       localStorage.setItem(`category-${eventId}`, category);
     }
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem(`note-${eventId}`);
-    const savedCategory = localStorage.getItem(
-      `category-${eventId}`
-    ); /*retrieving saved note and category from local storage based on eventId*/
-
+    const saved = localStorage.getItem(
+      `note-${eventId}`
+    ); /*retrieving saved note and category from local storage based on eventId changes*/
+    const savedCategory = localStorage.getItem(`category-${eventId}`);
     if (saved) {
       setSavedNote(saved);
       setTextArea(saved); // fill text area with existing saved note so user still sees saved note if they come back
-      setSave(true); //allows saved note to appear in the saved-note div and not in textArea
+      setSave(true); //allows saved note to appear in the saved-note div based on ternary
     }
 
     if (savedCategory) {
@@ -84,3 +83,4 @@ export default function AddANote({ eventId }) {
 }
 
 // https://meenumatharu.medium.com/a-practical-guide-to-using-local-storage-in-web-and-react-js-6d163a000c3a how to set local storage for a form
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
